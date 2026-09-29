@@ -1,0 +1,33 @@
+{
+  "repository": "alexandroit/stackline-remark-message-control",
+  "packages": [
+    {
+      "name": "@stackline/remark-message-control",
+      "path": "readme.md",
+      "version": "1.0.1",
+      "baselineVersion": "1.0.0",
+      "keywords": [
+        "stackline",
+        "npm-package",
+        "remark-message-control",
+        "typescript",
+        "unified",
+        "remark",
+        "remark-plugin",
+        "plugin",
+        "mdast",
+        "markdown",
+        "comment",
+        "message",
+        "marker",
+        "control",
+        "maintenance-fork"
+      ],
+      "homepage": "https://alexandro.net/docs/vanilla/remark-message-control/",
+      "baselineTarball": "https://registry.npmjs.org/@stackline/remark-message-control/-/remark-message-control-1.0.0.tgz",
+      "baselineIntegrity": "sha512-KTOiRaYMVRvaDDkmY4TZsyA+o2pPHh/RxCD+ZQ09K9OFChaPJgsaAKfXsOx0L+6/ajd2DzagRp0ecLmDMQN9AA==",
+      "expectedSha512": "c5e7fa51e62b9189b637923d1bbbefd914725b685d576f3d520dc97c7874b51372a840745e1fa3e1308d62fbd7efb8b829926f41bab785866c3793e5d0047ac1",
+      "tag": "docs-stackline-remark-message-control-v1.0.1"
+    }
+  ]
+}
