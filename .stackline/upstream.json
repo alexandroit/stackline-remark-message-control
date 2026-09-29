@@ -1,0 +1,20 @@
+{
+  "upstream": "remark-message-control",
+  "fork": "@stackline/remark-message-control",
+  "repository": "alexandroit/stackline-remark-message-control",
+  "upstreamRepository": "remarkjs/remark-message-control",
+  "upstreamVersion": "7.1.1",
+  "sourceCommit": "f89206d9937fdf4e533fcbb08b91cac746171dd7",
+  "upstreamIntegrity": "sha512-xKRWl1NTBOKed0oEtCd8BUfH5m4s8WXxFFSoo7uUwx6GW/qdCy4zov5LfPyw7emantDmhfWn5PdIZgcbVcWMDQ==",
+  "status": "source-ready",
+  "files": {
+    "license": "ca4662cb5d1b738fbe5350c0d5485ba11773b4b7208974082ae6e129a52d631d",
+    "index.js": "14e4924917530d048c36f4be14027d83fe63f7533a7f4236ba59ce5e70975417",
+    "package.json": "751990140437b379da7133c2f5858b26a0e7d627c7f951ab1448411e644b70fe",
+    "readme.md": "87906dde228f69f3761f1b3ac98849b59a107103cf0a86ed7a34e8fec2d0212e",
+    "index.d.ts": "7f46f48b7eea0a2846ebf78489c766bccd8e5395c91cd355914ac27cd5cd819e"
+  },
+  "allowedRuntimeChanges": [],
+  "testCommand": "node --conditions development test.js",
+  "strategy": "Published upstream files, including generated declarations, are preserved and checked against SHA-256. Functional tests run against source and the extracted final package. Changes to published runtime files require an explicit reviewed allowlist."
+}

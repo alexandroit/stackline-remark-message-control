@@ -1,3 +1,19 @@
+# @stackline/remark-message-control
+
+Independent maintenance fork of `remark-message-control@7.1.1`, preserving its API and published type declarations.
+
+```sh
+npm install @stackline/remark-message-control
+# Keep existing imports:
+npm install remark-message-control@npm:@stackline/remark-message-control@1.0.0
+```
+
+[Stackline](https://alexandro.net/) · [Issues](https://github.com/alexandroit/stackline-remark-message-control/issues) · [Community](https://www.reddit.com/r/Stackline/)
+
+See [UPSTREAM.md](UPSTREAM.md) for source identity and issue review, and [CHANGELOG.md](CHANGELOG.md) for maintenance changes. Functional tests also run against the final npm tarball; releases are published from GitHub Actions with provenance.
+
+## Upstream documentation
+
 <!--lint disable no-html-->
 
 # remark-message-control
