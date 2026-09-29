@@ -1,30 +1,52 @@
 # @stackline/remark-message-control
 
-Independent maintenance fork of `remark-message-control@7.1.1`, preserving its API and published type declarations.
+> remark plugin to enable, disable, and ignore messages with remark.
 
-```sh
+[![npm version](https://img.shields.io/npm/v/@stackline/remark-message-control.svg?style=flat-square)](https://www.npmjs.com/package/@stackline/remark-message-control)
+[![license](https://img.shields.io/npm/l/@stackline/remark-message-control.svg?style=flat-square)](https://github.com/alexandroit/stackline-remark-message-control)
+[![GitHub repository](https://img.shields.io/badge/GitHub-alexandroit%2Fstackline-remark-message-control-181717?style=flat-square&logo=github)](https://github.com/alexandroit/stackline-remark-message-control)
+[![Docs](https://img.shields.io/badge/docs-alexandro.net-0f766e?style=flat-square)](https://alexandro.net/docs/vanilla/remark-message-control/)
+[![Reddit community](https://img.shields.io/badge/community-r%2FStackline-ff4500?style=flat-square&logo=reddit&logoColor=white)](https://www.reddit.com/r/Stackline/)
+
+**[Documentation](https://alexandro.net/docs/vanilla/remark-message-control/)** | **[npm](https://www.npmjs.com/package/@stackline/remark-message-control)** | **[Issues](https://github.com/alexandroit/stackline-remark-message-control/issues)** | **[Repository](https://github.com/alexandroit/stackline-remark-message-control)**
+
+**Current package version:** `1.0.1`
+
+---
+
+## Why this package?
+
+`@stackline/remark-message-control` is the Stackline-maintained distribution of `remark-message-control@7.1.1`. It is an independent continuation of [remark-message-control](https://github.com/remarkjs/remark-message-control); original authors and licenses remain credited below.
+
+## Compatibility
+
+| Item | Value |
+| :--- | :--- |
+| Package | `@stackline/remark-message-control@1.0.1` |
+| API target | `remark-message-control@7.1.1` |
+| Supported Node.js | `See supported framework requirements` |
+| License | `MIT` |
+| Module type | `module` |
+| Main entry | `index.js` |
+| Types | `index.d.ts` |
+| Runtime dependencies | `vfile, unified, @types/mdast, mdast-comment-marker, unified-message-control` |
+
+## Installation
+
+```bash
 npm install @stackline/remark-message-control
-# Keep existing imports:
-npm install remark-message-control@npm:@stackline/remark-message-control@1.0.0
 ```
 
-[Stackline](https://alexandro.net/) · [Issues](https://github.com/alexandroit/stackline-remark-message-control/issues) · [Community](https://www.reddit.com/r/Stackline/)
+Preserve existing imports and plugin resolution with an npm alias:
 
-See [UPSTREAM.md](UPSTREAM.md) for source identity and issue review, and [CHANGELOG.md](CHANGELOG.md) for maintenance changes. Functional tests also run against the final npm tarball; releases are published from GitHub Actions with provenance.
+```bash
+npm install remark-message-control@npm:@stackline/remark-message-control
+```
 
-## Upstream documentation
+## Usage and API reference
 
-<!--lint disable no-html-->
+### remark-message-control
 
-# remark-message-control
-
-[![Build][build-badge]][build]
-[![Coverage][coverage-badge]][coverage]
-[![Downloads][downloads-badge]][downloads]
-[![Size][size-badge]][size]
-[![Sponsors][sponsors-badge]][collective]
-[![Backers][backers-badge]][collective]
-[![Chat][chat-badge]][chat]
 
 **[remark][]** plugin to enable, disable, and ignore messages.
 
@@ -70,7 +92,7 @@ This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908
 In Node.js (version 12.20+, 14.14+, or 16.0+), install with [npm][]:
 
 ```sh
-npm install remark-message-control
+npm install @stackline/remark-message-control
 ```
 
 In Deno with [Skypack][]:
@@ -92,7 +114,7 @@ In browsers with [Skypack][]:
 Say we have the following file `example.md`:
 
 ```markdown
-<!--foo ignore-->
+
 
 ## Heading
 ```
@@ -103,7 +125,7 @@ And our module `example.js` looks as follows:
 import {read} from 'to-vfile'
 import {reporter} from 'vfile-reporter'
 import {remark} from 'remark'
-import remarkMessageControl from 'remark-message-control'
+import remarkMessageControl from '@stackline/remark-message-control'
 
 main()
 
@@ -145,7 +167,7 @@ Name of markers that can control the message sources (`string`).
 For example, `{name: 'alpha'}` controls `alpha` markers:
 
 ```markdown
-<!--alpha ignore-->
+
 ```
 
 ###### `options.known`
@@ -157,7 +179,7 @@ For example, `{name: 'alpha', known: ['bravo']}` results in a warning if
 `charlie` is configured:
 
 ```markdown
-<!--alpha ignore charlie-->
+
 ```
 
 ###### `options.reset`
@@ -180,7 +202,7 @@ List of `ruleId`s to turn on if `reset: false` (`Array<string>`, optional).
 Sources that can be controlled with `name` markers (`string` or
 `Array<string>`, default: `options.name`).
 
-<!--Old name of section-->
+
 
 <a name="markers"></a>
 
@@ -218,7 +240,7 @@ When without identifiers, all messages are turned off.
 For example, to turn off certain messages:
 
 ```markdown
-<!--lint disable list-item-bullet-indent strong-marker-->
+
 
 *   **foo**
 
@@ -235,7 +257,7 @@ When without identifiers, all messages are turned on.
 For example, to enable certain messages:
 
 ```markdown
-<!--lint enable strong-marker-->
+
 
 **foo** and __bar__.
 ```
@@ -251,7 +273,7 @@ Messages are turned on again after the end of the following node.
 For example, to turn off certain messages for the next node:
 
 ```markdown
-<!--lint ignore list-item-bullet-indent strong-marker-->
+
 
 *   **foo**
   * __bar__
@@ -301,7 +323,7 @@ abide by its terms.
 
 [MIT][license] © [Titus Wormer][author]
 
-<!-- Definitions -->
+
 
 [build-badge]: https://github.com/remarkjs/remark-message-control/workflows/main/badge.svg
 
@@ -358,3 +380,23 @@ abide by its terms.
 [hast]: https://github.com/syntax-tree/hast
 
 [remark-lint]: https://github.com/remarkjs/remark-lint
+
+## Credits and original authors
+
+- Original project: [remark-message-control](https://github.com/remarkjs/remark-message-control).
+- Titus Wormer.
+- Christian Murphy.
+- Copyright (c) 2016 Titus Wormer <tituswormer@gmail.com>.
+- Stackline maintenance: [Alexandro Paixao Marques](https://www.linkedin.com/in/aleinfo/) and [Stackline contributors](https://github.com/alexandroit).
+
+Original copyright, license notices and contributor acknowledgements remain part of this distribution. Stackline maintenance does not replace authorship of the original work.
+
+## Community and Links
+
+- [Stackline website](https://alexandro.net/)
+- [GitHub projects](https://github.com/alexandroit)
+- [npm packages](https://www.npmjs.com/~alex360qc)
+- [Reddit community — r/Stackline](https://www.reddit.com/r/Stackline/)
+- [Maintainer LinkedIn](https://www.linkedin.com/in/aleinfo/)
+
+Use this repository's issue tracker for reproducible bugs and feature requests. Join r/Stackline for examples, usage questions and release discussions.

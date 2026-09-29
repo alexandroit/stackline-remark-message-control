@@ -26,8 +26,12 @@
     "test:package": "node scripts/test-package.mjs",
     "test:types": "tsc --ignoreConfig --noEmit --module NodeNext --moduleResolution NodeNext --target ES2022 --strict test/stackline-types.mts"
   },
-  "homepage": "https://github.com/alexandroit/stackline-remark-message-control#readme",
+  "homepage": "https://alexandro.net/docs/vanilla/remark-message-control/",
   "keywords": [
+    "stackline",
+    "npm-package",
+    "remark-message-control",
+    "typescript",
     "unified",
     "remark",
     "remark-plugin",
@@ -38,7 +42,6 @@
     "message",
     "marker",
     "control",
-    "stackline",
     "maintenance-fork"
   ],
   "prettier": {
@@ -92,7 +95,7 @@
     "typescript": "7.0.2",
     "@types/node": "24.12.2"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publishConfig": {
     "access": "public"
   },
